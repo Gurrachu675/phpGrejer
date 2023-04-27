@@ -8,7 +8,7 @@ Skriv ditt användarnamn:
 <br>
 Skriv din lösenord: 
 <br>
-<input type="text" name="lösenord">
+<input type="password" name="lösenord">
 <br>
 <input type="submit">
 </form>
