@@ -1,9 +1,9 @@
 <?php
-$InLäggs = $_POST["inlägg"];
+$InLaggs = $_POST["inlagg"];
+$timestamp = date("m/d/Y", strtotime($date));
 
-
-$db = new SQLite3('Inlägg.sq3'); 
-$db->exec("CREATE TABLE IF NOT EXISTS InLägg (InläggText text, TimeStampe text, InläggsID integer primary key autoincrement, Användare text)");
-$db->exec("INSERT INTO InLogningar VALUES('".$InLäggs."','".$."','".$_COOKIE['Anvandare']."')"); 
+$db = new SQLite3('Inlagg.sq3'); 
+$db->exec("CREATE TABLE IF NOT EXISTS InLagg (InlaggText text, TimeStampe text, InlaggsID integer primary key autoincrement, Användare text)");
+$db->exec("INSERT INTO InLagg VALUES('".$InLaggs."','".$timestamp."','".$_COOKIE['Anvandare']."')"); 
 header("Location: html1q.php");
 ?>
