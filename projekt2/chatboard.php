@@ -5,6 +5,13 @@ echo 'welcum '.$_COOKIE['Anvandare'];
 <html>
 <body>
 <head><title>Input Box</title></head>
+<form action="phpSök.php" method="POST">
+Sök på användare: 
+<br>
+<input type="text" name="AnvändarSök">
+<br>
+<input type="submit">
+</form>
 <form action="phpSaveInlägg.php" method="POST">
 skapa inlägg här: 
 <br>
@@ -16,10 +23,10 @@ skapa inlägg här:
 </html>
 <?php
 $db = new SQLite3('InLagg.sq3');
-$allInputquery = "SELECT * FROM InLagg"; 
-$inLägning = $db->query($allInputquery); 
-while ($row = $inLägning->fetchArray(SQLITE3_ASSOC))
+$allInputQuery = "SELECT * FROM InLagg"; 
+$inLagning = $db->query($allInputQuery); 
+while ($row = $inLagning->fetchArray(SQLITE3_ASSOC))
 {
- echo $row['InlaggText'];
+    echo $row['InlaggText'];
 }
 ?>
